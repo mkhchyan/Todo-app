@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom'
-// import { add } from "../store/tasks/action";
 
 function AddTasks() {
     const navigate = useNavigate()
@@ -16,7 +15,6 @@ function AddTasks() {
     const onSubmit = (data) => {
         data.id = Math.round(Math.random() * 50)
         console.log('DATAA',data);
-        // dispatch(add(data))
         dispatch({ data, navigate, type: "ADD_TASK" })
         reset()
     }
